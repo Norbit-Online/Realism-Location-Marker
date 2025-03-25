@@ -30,8 +30,8 @@
 // @match        https://www.operacni-stredisko.cz/*
 // @match        https://www.112-merkez.com/*
 // @match        https://www.dyspetcher101-game.com/*
-// @downloadURL  https://rlm.missionchief-unofficial.com/rlm/loader.user.js
-// @updateURL    https://rlm.missionchief-unofficial.com/rlm/loader.user.js
+// @downloadURL  https://github.com/Missionchiefunofficial/Realism-Location-Marker/raw/refs/heads/main/loader.user.js
+// @updateURL    https://github.com/Missionchiefunofficial/Realism-Location-Marker/raw/refs/heads/main/loader.user.js
 // @grant        GM_xmlhttpRequest
 // @grant        GM_info
 // @run-at       document-start
