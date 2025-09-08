@@ -1,9 +1,11 @@
 // ==UserScript==
 // @name         Realism Location Marker
 // @namespace    https://missionchief-unofficial.com
-// @version      6.1.0
+// @version      6.3.0
 // @description  RLM with multi-language support and server-specific building IDs
-// @author       MissionChief Unofficial Team
+// @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
+// @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
+// @copyright    Copyright (C) 2025 Norbit.Online
 // @icon         https://rlm.missionchief-unofficial.com/static/assets/images/RLM-Marker.png
 // @match        https://www.missionchief.com/*
 // @match        https://www.missionchief.co.uk/*
@@ -250,10 +252,11 @@
         
         console.log('RLM Loader: Full config:', window.RLMConfig);
 
-        // Load the server script
+        // Load the server script with cache busting
+        const timestamp = Date.now();
         GM_xmlhttpRequest({
             method: 'GET',
-            url: 'https://rlm.missionchief-unofficial.com/rlm/realism-location-marker.user.js',
+            url: `https://rlm.missionchief-unofficial.com/api/script/main?_t=${timestamp}`,
             onload: function(response) {
                 try {
                     console.log('RLM Loader: Server script loaded, length:', response.responseText.length);
