@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Realism Location Marker (BETA)
 // @namespace    https://missionchief-unofficial.com
-// @version      6.3.0-beta
+// @version      6.3.1-beta
 // @description  Beta version of RLM with multi-language support and server-specific building IDs
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
@@ -45,8 +45,8 @@
 // @match        https://www.dyspetcher101-game.com/*
 // @match        https://www.hatakeskuspeli.com/*
 // @match        https://poliisi.hatakeskuspeli.com/*
-// @downloadURL  https://rlm.missionchief-unofficial.com/rlm/loader.beta.user.js
-// @updateURL    https://rlm.missionchief-unofficial.com/rlm/loader.beta.user.js
+// @downloadURL  https://github.com/Missionchiefunofficial/Realism-Location-Marker/raw/refs/heads/main/RLM/loaders/loader.beta.user.js
+// @updateURL    https://github.com/Missionchiefunofficial/Realism-Location-Marker/raw/refs/heads/main/RLM/loaders/loader.beta.user.js
 // @grant        GM_xmlhttpRequest
 // @grant        GM_info
 // @run-at       document-start
