@@ -1,8 +1,26 @@
 # RLM Changelog
 
-**Revision**: 1.1
+**Revision**: 1.2
 
 This document tracks all changes, updates, and improvements made to the Realism Location Marker (RLM) project.
+
+---
+
+## Version 6.3.2
+**Release Date**: January 9, 2025
+
+### 🔗 Installation Improvements
+- **Direct Raw Links**: Added one-click installation links to all loader files
+- **Simplified Process**: Reduced installation steps from 7 to 4 steps
+- **README Enhancement**: Made loader names clickable in the comparison table
+- **Path Correction**: Fixed all URLs to point to correct GitHub root directory
+- **Documentation Updates**: Updated Installation Guide with direct links and alternative manual method
+
+### 📖 Documentation Updates
+- **Installation Guide**: Updated to Revision 1.1 with improved step-by-step process
+- **Changelog**: Updated to Revision 1.2 with latest improvements
+- **README**: Updated to Revision 1.2 with clickable loader links in comparison table
+- **Visual Guide**: Updated to reflect actual GitHub repository structure
 
 ---
 
