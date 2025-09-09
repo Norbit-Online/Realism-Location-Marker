@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Realism Location Marker (DEV)
 // @namespace    https://missionchief-unofficial.com
-// @version      6.3.0-dev
+// @version      6.4.0-dev
 // @description  Development version of RLM for testing new features before beta
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
