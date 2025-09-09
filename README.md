@@ -1,7 +1,7 @@
 <!-- Revision: 1.1 -->
 # Realism Location Marker V6 ![version](https://badgen.net/badge/Version/6.3.0/) ![Discord](https://img.shields.io/discord/933050444949897226.svg?label=MissionChiefUnofficial&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)
 
-![GitHub stars](https://img.shields.io/github/stars/Missionchiefunofficial/Realism-Location-Marker?style=social) ![GitHub forks](https://img.shields.io/github/forks/Missionchiefunofficial/Realism-Location-Marker?style=social) ![GitHub issues](https://img.shields.io/github/issues/Missionchiefunofficial/Realism-Location-Marker) ![GitHub last commit](https://img.shields.io/github/last-commit/Missionchiefunofficial/Realism-Location-Marker) ![Main](https://img.shields.io/badge/Main-0%20users-green?logo=https://rlm.missionchief-unofficial.com/static/assets/images/RLM-Marker.png) ![Beta](https://img.shields.io/badge/Beta-0%20users-yellow?logo=https://rlm.missionchief-unofficial.com/static/assets/images/RLM-Marker.png) ![Dev](https://img.shields.io/badge/Dev-0%20users-red?logo=https://rlm.missionchief-unofficial.com/static/assets/images/RLM-Marker.png)
+![GitHub stars](https://img.shields.io/github/stars/Missionchiefunofficial/Realism-Location-Marker?style=social) ![GitHub forks](https://img.shields.io/github/forks/Missionchiefunofficial/Realism-Location-Marker?style=social) ![GitHub issues](https://img.shields.io/github/issues/Missionchiefunofficial/Realism-Location-Marker) ![GitHub last commit](https://img.shields.io/github/last-commit/Missionchiefunofficial/Realism-Location-Marker) ![Main](https://img.shields.io/badge/Main-0%20users-green?logo=https://rlm.missionchief-unofficial.com/static/assets/images/RLM-Marker.png) ![Beta](https://img.shields.io/badge/Beta-0%20users-yellow?logo=https://rlm.missionchief-unofficial.com/static/assets/images/RLM-Marker.png) ![Dev](https://img.shields.io/badge/Dev-0%20users-red?logo=https://rlm.missionchief-unofficial.com/static/assets/images/RLM-Marker.png) ![Web](https://img.shields.io/badge/Web-0%20users-blue?logo=https://rlm.missionchief-unofficial.com/static/assets/images/RLM-Marker.png)
 
 > **Realism Location Marker (RLM)** is a Tampermonkey userscript that displays real-world building locations on MissionChief game maps, enhancing gameplay with accurate geographical data.
 
@@ -14,6 +14,7 @@ Choose the loader that's right for you:
 | **Main Loader** | 🟢 **Public** | Open to all users | Stable release with all core features |
 | **Beta Loader** | 🟡 **Restricted** | Authorized users only | Pre-release testing with latest features |
 | **Dev Loader** | 🔴 **Restricted** | Authorized users only | Development version with experimental features |
+| **Web Interface** | 🔵 **Public** | Open to all users | Web-based interface for POI management |
 
 ### 📖 Installation Guide
 
@@ -38,6 +39,12 @@ Choose the loader that's right for you:
 - **Access**: Restricted - Authorization required
 - **Features**: Cutting-edge features + experimental functionality
 - **Recommended for**: Developers and advanced users testing bleeding-edge features
+
+### 🔵 Web Interface
+- **Version**: Always latest
+- **Access**: Public - No restrictions
+- **Features**: Full web-based interface for viewing and managing POIs
+- **Recommended for**: Users who prefer web interfaces or cannot install browser extensions
 
 ## 🔐 Access Restrictions
 
