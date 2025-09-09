@@ -1,4 +1,4 @@
-<!-- Revision: 1.0 -->
+<!-- Revision: 1.1 -->
 # Installation Guide
 
 Welcome to the Realism Location Marker (RLM) installation guide! This comprehensive guide will walk you through installing RLM on all major browsers.
@@ -6,6 +6,7 @@ Welcome to the Realism Location Marker (RLM) installation guide! This comprehens
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
+- [Quick Installation Guide](#quick-installation-guide)
 - [Browser-Specific Installation](#browser-specific-installation)
   - [Chrome](#chrome)
   - [Firefox](#firefox)
@@ -25,6 +26,42 @@ Before installing RLM, ensure you have:
 - Access to MissionChief game website
 - Basic understanding of browser extensions
 
+## Quick Installation Guide
+
+### 📋 Step-by-Step Process
+
+1. **Install Tampermonkey**: Get the Tampermonkey extension for your browser
+2. **Choose Your Loader**: Click the direct link for your preferred version:
+   - 🟢 **Main**: [Install Main Loader](https://raw.githubusercontent.com/Missionchiefunofficial/Realism-Location-Marker/main/loader.user.js)
+   - 🟡 **Beta**: [Install Beta Loader](https://raw.githubusercontent.com/Missionchiefunofficial/Realism-Location-Marker/main/loader.beta.user.js)
+   - 🔴 **Dev**: [Install Dev Loader](https://raw.githubusercontent.com/Missionchiefunofficial/Realism-Location-Marker/main/loader.dev.user.js)
+3. **Install**: Tampermonkey will automatically detect the script and show installation dialog
+4. **Confirm**: Click "Install" in the Tampermonkey dialog
+5. **Play**: Visit MissionChief and enjoy enhanced gameplay!
+
+### 🎯 Alternative Method (Manual Navigation)
+
+If you prefer to navigate manually:
+1. **Go to GitHub**: Visit our [repository](https://github.com/Missionchiefunofficial/Realism-Location-Marker)
+2. **Find Loader Files**: Look for the loader files in the root directory:
+   - `loader.user.js` (Main)
+   - `loader.beta.user.js` (Beta)
+   - `loader.dev.user.js` (Dev)
+3. **Choose Your Loader**: Click on your chosen loader file
+4. **Click Raw**: Click the "Raw" button to view script source
+5. **Install**: Tampermonkey will detect and offer to install the script
+6. **Confirm**: Click "Install" in the Tampermonkey dialog
+
+### 🎯 Visual Guide
+
+**Step 1**: Install Tampermonkey from your browser's extension store
+**Step 2**: Go to GitHub repository (files are in the root directory)
+**Step 3**: Click on your chosen loader file (`loader.user.js`, `loader.beta.user.js`, or `loader.dev.user.js`)
+**Step 4**: Click the "Raw" button (top-right corner)
+**Step 5**: Tampermonkey will automatically detect the script
+**Step 6**: Click "Install" when prompted
+**Step 7**: Verify installation in your browser's extension settings
+
 ## Browser-Specific Installation
 
 ### Chrome
@@ -42,19 +79,16 @@ Before installing RLM, ensure you have:
 3. This enables advanced extension features needed for userscripts
 
 #### Step 3: Install RLM Loader
-1. Go to our [GitHub repository](https://github.com/Missionchiefunofficial/Realism-Location-Marker)
-2. Click on your chosen loader file:
+1. **Go to GitHub Repository**: Navigate to our [GitHub repository](https://github.com/Missionchiefunofficial/Realism-Location-Marker)
+2. **Navigate to Loaders**: Click on the `RLM` folder, then `loaders` folder
+3. **Choose Your Loader**: Click on your chosen loader file:
    - `loader.user.js` (Main - Public access)
-   - `loader.beta.user.js` (Beta - Restricted access)
+   - `loader.beta.user.js` (Beta - Restricted access)  
    - `loader.dev.user.js` (Dev - Restricted access)
-3. Click **"Raw"** to view the script source
-4. Tampermonkey will automatically detect the script and show an installation dialog
-5. Click **"Install"** to confirm
-
-#### Step 4: Verify Installation
-1. Go to `chrome://extensions/`
-2. Find Tampermonkey and click **"Details"**
-3. Ensure the RLM script is listed under **"Installed userscripts"**
+4. **Click Raw Button**: Click the **"Raw"** button (top-right) to view the script source
+5. **Install Script**: Tampermonkey will automatically detect the script and show an installation dialog
+6. **Confirm Installation**: Click **"Install"** in the Tampermonkey dialog
+7. **Verify Installation**: Go to `chrome://extensions/` and ensure the RLM script is listed under Tampermonkey
 
 ---
 
