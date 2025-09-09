@@ -1,5 +1,7 @@
 # RLM Changelog
 
+**Revision**: 1.1
+
 This document tracks all changes, updates, and improvements made to the Realism Location Marker (RLM) project.
 
 ---
@@ -19,6 +21,8 @@ This document tracks all changes, updates, and improvements made to the Realism 
 - **GitHub Badges**: Added live statistics badges to README showing user counts for each loader type
 - **Custom RLM Marker Icons**: Integrated custom RLM marker icons into GitHub badges using Custom Icon Badges service
 - **Web User Tracking**: Added tracking for web interface users (non-Tampermonkey users)
+- **Total User Count**: Added automatic calculation and display of total unique users across all platforms
+- **Enhanced Statistics Display**: Improved Discord embed formatting with clearer platform names and update frequency indication
 
 ### 🎯 Badge System
 - **Main Badge**: Green badge with custom RLM marker icon
