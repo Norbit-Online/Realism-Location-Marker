@@ -3,6 +3,8 @@
 
 ![GitHub stars](https://img.shields.io/github/stars/Missionchiefunofficial/Realism-Location-Marker?style=social) ![GitHub forks](https://img.shields.io/github/forks/Missionchiefunofficial/Realism-Location-Marker?style=social) ![GitHub issues](https://img.shields.io/github/issues/Missionchiefunofficial/Realism-Location-Marker) ![GitHub last commit](https://img.shields.io/github/last-commit/Missionchiefunofficial/Realism-Location-Marker)
 
+![Main](https://img.shields.io/badge/Main-0%20users-green?logo=https://rlm.missionchief-unofficial.com/static/assets/images/RLM-Marker.png) ![Beta](https://img.shields.io/badge/Beta-0%20users-yellow?logo=https://rlm.missionchief-unofficial.com/static/assets/images/RLM-Marker.png) ![Dev](https://img.shields.io/badge/Dev-0%20users-red?logo=https://rlm.missionchief-unofficial.com/static/assets/images/RLM-Marker.png)
+
 > **Realism Location Marker (RLM)** is a Tampermonkey userscript that displays real-world building locations on MissionChief game maps, enhancing gameplay with accurate geographical data.
 
 ## 🚀 Quick Start
