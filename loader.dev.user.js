@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Realism Location Marker (DEV)
+// @name         Realism Location Marker V7.0.0 [DEV]
 // @namespace    https://missionchief-unofficial.com
-// @version      6.4.1-dev
-// @description  Development version of RLM for testing new features before beta
+// @version      7.0.0-dev
+// @description  RLM V7.0.0 DEV with modular dropdown system and multi-language support
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // @copyright    Copyright (C) 2025 Norbit.Online
@@ -45,8 +45,8 @@
 // @match        https://www.dyspetcher101-game.com/*
 // @match        https://www.hatakeskuspeli.com/*
 // @match        https://poliisi.hatakeskuspeli.com/*
-// @downloadURL  https://github.com/Missionchiefunofficial/Realism-Location-Marker/raw/refs/heads/main/RLM/loaders/loader.dev.user.js
-// @updateURL    https://github.com/Missionchiefunofficial/Realism-Location-Marker/raw/refs/heads/main/RLM/loaders/loader.dev.user.js
+// @downloadURL  https://raw.githubusercontent.com/Missionchiefunofficial/Realism-Location-Marker/main/loader.dev.user.js
+// @updateURL    https://raw.githubusercontent.com/Missionchiefunofficial/Realism-Location-Marker/main/loader.dev.user.js
 // @grant        GM_xmlhttpRequest
 // @grant        GM_info
 // @run-at       document-start
@@ -55,7 +55,7 @@
 (function() {
     'use strict';
     
-    console.log('RLM V6 Dev Loader starting...');
+    console.log('RLM V7 Dev Loader starting...');
 
     // Domain mapping for MissionChief
     const domainMapping = {
@@ -102,11 +102,11 @@
     // Function to get game configuration based on current domain
     function getGameConfig() {
         const currentDomain = window.location.href;
-        console.log('RLM Dev Loader: Current domain:', currentDomain);
+        console.log('RLM V7 Dev Loader: Current domain:', currentDomain);
         
         for (const [domain, config] of Object.entries(domainMapping)) {
             if (currentDomain.includes(domain.replace("*", ""))) {
-                console.log('RLM Dev Loader: Matched game config:', {
+                console.log('RLM V7 Dev Loader: Matched game config:', {
                     domain: domain,
                     country: config.country,
                     gameUrl: config.gameUrl
@@ -114,7 +114,7 @@
                 return config;
             }
         }
-        console.error('RLM Dev Loader: No matching game config found for domain:', currentDomain);
+        console.error('RLM V7 Dev Loader: No matching game config found for domain:', currentDomain);
         return null;
     }
 
@@ -129,17 +129,17 @@
             buildingTypes: '/api/building-types',
             dispatchCenters: '/api/dispatch-centers'
         },
-        version: '6.1.0-dev',
+        version: '7.0.0-dev',
         status: 'Dev Testing'
     };
 
     function loadServerScript() {
-        console.log('RLM Dev Loader: Loading server script...');
+        console.log('RLM V7 Dev Loader: Loading server script...');
         
         // Get game configuration
         const gameConfig = getGameConfig();
         if (!gameConfig) {
-            console.error('RLM Dev Loader: Could not determine game configuration');
+            console.error('RLM V7 Dev Loader: Could not determine game configuration');
             return;
         }
 
@@ -150,7 +150,7 @@
             gameUrl: gameConfig.gameUrl
         };
         
-        console.log('RLM Dev Loader: Full config:', window.RLMConfig);
+        console.log('RLM V7 Dev Loader: Full config:', window.RLMConfig);
 
         // Always load the dev server script
         loadDefaultScript();
@@ -163,25 +163,25 @@
             url: `https://rlm.missionchief-unofficial.com/api/script/dev?_t=${timestamp}`,
             onload: function(response) {
                 try {
-                    console.log('RLM Dev Loader: Default script loaded, length:', response.responseText.length);
+                    console.log('RLM V7 Dev Loader: Default script loaded, length:', response.responseText.length);
                     eval(response.responseText);
-                    console.log('RLM Dev Loader: Default script evaluated successfully');
+                    console.log('RLM V7 Dev Loader: Default script evaluated successfully');
                 } catch (error) {
-                    console.error('RLM Dev Loader: Error evaluating default script:', error);
+                    console.error('RLM V7 Dev Loader: Error evaluating default script:', error);
                 }
             },
             onerror: function(error) {
-                console.error('RLM Dev Loader: Error loading default script:', error);
+                console.error('RLM V7 Dev Loader: Error loading default script:', error);
             }
         });
     }
 
     // Wait for document to be ready
     if (document.readyState === 'loading') {
-        console.log('RLM Dev Loader: Document loading, waiting for DOMContentLoaded...');
+        console.log('RLM V7 Dev Loader: Document loading, waiting for DOMContentLoaded...');
         document.addEventListener('DOMContentLoaded', loadServerScript);
     } else {
-        console.log('RLM Dev Loader: Document already loaded, executing immediately...');
+        console.log('RLM V7 Dev Loader: Document already loaded, executing immediately...');
         loadServerScript();
     }
 })(); 
