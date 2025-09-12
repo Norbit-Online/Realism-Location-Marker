@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Realism Location Marker V7.0.0 [DEV]
 // @namespace    https://missionchief-unofficial.com
-// @version      7.0.0-dev
+// @version      7.0.1-dev
 // @description  RLM V7.0.0 DEV with modular dropdown system and multi-language support
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
@@ -129,7 +129,7 @@
             buildingTypes: '/api/building-types',
             dispatchCenters: '/api/dispatch-centers'
         },
-        version: '7.0.0-dev',
+        version: '7.0.1-dev',
         status: 'Dev Testing'
     };
 
@@ -160,18 +160,18 @@
         const timestamp = Date.now();
         GM_xmlhttpRequest({
             method: 'GET',
-            url: `https://rlm.missionchief-unofficial.com/api/script/dev?_t=${timestamp}`,
+            url: `https://rlm.missionchief-unofficial.com/api/dev-entry-point?_t=${timestamp}`,
             onload: function(response) {
                 try {
-                    console.log('RLM V7 Dev Loader: Default script loaded, length:', response.responseText.length);
+                    console.log('RLM V7 Dev Loader: Dev entry point loaded, length:', response.responseText.length);
                     eval(response.responseText);
-                    console.log('RLM V7 Dev Loader: Default script evaluated successfully');
+                    console.log('RLM V7 Dev Loader: Dev entry point evaluated successfully');
                 } catch (error) {
-                    console.error('RLM V7 Dev Loader: Error evaluating default script:', error);
+                    console.error('RLM V7 Dev Loader: Error evaluating dev entry point:', error);
                 }
             },
             onerror: function(error) {
-                console.error('RLM V7 Dev Loader: Error loading default script:', error);
+                console.error('RLM V7 Dev Loader: Error loading dev entry point:', error);
             }
         });
     }
