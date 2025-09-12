@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Realism Location Marker (BETA)
 // @namespace    https://missionchief-unofficial.com
-// @version      6.3.1-beta
+// @version      7.0.1-beta
 // @description  Beta version of RLM with multi-language support and server-specific building IDs
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
@@ -45,8 +45,8 @@
 // @match        https://www.dyspetcher101-game.com/*
 // @match        https://www.hatakeskuspeli.com/*
 // @match        https://poliisi.hatakeskuspeli.com/*
-// @downloadURL  https://github.com/Missionchiefunofficial/Realism-Location-Marker/raw/refs/heads/main/RLM/loaders/loader.beta.user.js
-// @updateURL    https://github.com/Missionchiefunofficial/Realism-Location-Marker/raw/refs/heads/main/RLM/loaders/loader.beta.user.js
+// @downloadURL  https://raw.githubusercontent.com/Missionchiefunofficial/Realism-Location-Marker/main/loader.beta.user.js
+// @updateURL    https://raw.githubusercontent.com/Missionchiefunofficial/Realism-Location-Marker/main/loader.beta.user.js
 // @grant        GM_xmlhttpRequest
 // @grant        GM_info
 // @run-at       document-start
@@ -55,7 +55,7 @@
 (function() {
     'use strict';
     
-    console.log('RLM V6 Beta Loader starting...');
+    console.log('RLM V7 Beta Loader starting...');
 
     // Domain mapping for MissionChief
     const domainMapping = {
@@ -216,11 +216,11 @@
     // Function to get game configuration based on current domain
     function getGameConfig() {
         const currentDomain = window.location.href;
-        console.log('RLM Beta Loader: Current domain:', currentDomain);
+        console.log('RLM V7 Beta Loader: Current domain:', currentDomain);
         
         for (const [domain, config] of Object.entries(domainMapping)) {
             if (currentDomain.includes(domain.replace("*", ""))) {
-                console.log('RLM Beta Loader: Matched game config:', {
+                console.log('RLM V7 Beta Loader: Matched game config:', {
                     domain: domain,
                     country: config.country,
                     gameUrl: config.gameUrl
@@ -228,7 +228,7 @@
                 return config;
             }
         }
-        console.error('RLM Beta Loader: No matching game config found for domain:', currentDomain);
+        console.error('RLM V7 Beta Loader: No matching game config found for domain:', currentDomain);
         return null;
     }
 
@@ -243,59 +243,59 @@
             buildingTypes: '/api/building-types',
             dispatchCenters: '/api/dispatch-centers'
         },
-        version: '6.1.0-beta',
+        version: '7.0.1-beta',
         status: 'Beta Testing'
     };
 
-    function loadServerScript() {
-        console.log('RLM Beta Loader: Loading server script...');
+    function loadModularSystem() {
+        console.log('RLM V7 Beta Loader: Loading modular system...');
         
         // Get game configuration
         const gameConfig = getGameConfig();
         if (!gameConfig) {
-            console.error('RLM Beta Loader: Could not determine game configuration');
+            console.error('RLM V7 Beta Loader: Could not determine game configuration');
             return;
         }
 
-        // Add configuration before loading the server script
+        // Add configuration before loading the modular system
         window.RLMConfig = {
             ...config,
             country: gameConfig.country,
             gameUrl: gameConfig.gameUrl
         };
         
-        console.log('RLM Beta Loader: Full config:', window.RLMConfig);
+        console.log('RLM V7 Beta Loader: Full config:', window.RLMConfig);
 
-        // Always load the default script
-        loadDefaultScript();
+        // Load the beta entry point
+        loadBetaEntryPoint();
     }
 
-    function loadDefaultScript() {
+    function loadBetaEntryPoint() {
         const timestamp = Date.now();
         GM_xmlhttpRequest({
             method: 'GET',
-            url: `https://rlm.missionchief-unofficial.com/api/script/beta?_t=${timestamp}`,
+            url: `https://rlm.missionchief-unofficial.com/api/script/beta-entry-point?_t=${timestamp}`,
             onload: function(response) {
                 try {
-                    console.log('RLM Beta Loader: Default script loaded, length:', response.responseText.length);
+                    console.log('RLM V7 Beta Loader: Beta entry point loaded, length:', response.responseText.length);
                     eval(response.responseText);
-                    console.log('RLM Beta Loader: Default script evaluated successfully');
+                    console.log('RLM V7 Beta Loader: Beta entry point evaluated successfully');
                 } catch (error) {
-                    console.error('RLM Beta Loader: Error evaluating default script:', error);
+                    console.error('RLM V7 Beta Loader: Error evaluating beta entry point:', error);
                 }
             },
             onerror: function(error) {
-                console.error('RLM Beta Loader: Error loading default script:', error);
+                console.error('RLM V7 Beta Loader: Error loading beta entry point:', error);
             }
         });
     }
 
     // Wait for document to be ready
     if (document.readyState === 'loading') {
-        console.log('RLM Beta Loader: Document loading, waiting for DOMContentLoaded...');
-        document.addEventListener('DOMContentLoaded', loadServerScript);
+        console.log('RLM V7 Beta Loader: Document loading, waiting for DOMContentLoaded...');
+        document.addEventListener('DOMContentLoaded', loadModularSystem);
     } else {
-        console.log('RLM Beta Loader: Document already loaded, executing immediately...');
-        loadServerScript();
+        console.log('RLM V7 Beta Loader: Document already loaded, executing immediately...');
+        loadModularSystem();
     }
 })(); 
