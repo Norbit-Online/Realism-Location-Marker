@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Realism Location Marker
 // @namespace    https://missionchief-unofficial.com
-// @version      6.3.1
+// @version      7.0.2
 // @description  RLM with multi-language support and server-specific building IDs
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
@@ -31,8 +31,8 @@
 // @match        https://www.operador112.com/*
 // @match        https://www.operateur112.be/*
 // @match        https://www.dispecerske-centrum.com/*
-// @downloadURL  https://github.com/Missionchiefunofficial/Realism-Location-Marker/raw/refs/heads/main/RLM/loaders/loader.user.js
-// @updateURL    https://github.com/Missionchiefunofficial/Realism-Location-Marker/raw/refs/heads/main/RLM/loaders/loader.user.js
+// @downloadURL  https://raw.githubusercontent.com/Missionchiefunofficial/Realism-Location-Marker/main/loader.user.js
+// @updateURL    https://raw.githubusercontent.com/Missionchiefunofficial/Realism-Location-Marker/main/loader.user.js
 // @grant        GM_xmlhttpRequest
 // @grant        GM_info
 // @run-at       document-start
@@ -229,8 +229,8 @@
             buildingTypes: '/api/building-types',
             dispatchCenters: '/api/dispatch-centers'
         },
-        version: '6.1.0',
-        status: 'Live'
+        version: '7.0.2',
+        status: 'Production'
     };
 
     function loadServerScript() {
