@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Realism Location Marker (BETA)
 // @namespace    https://missionchief-unofficial.com
-// @version      7.0.1-beta
+// @version      7.0.2-beta
 // @description  Beta version of RLM with multi-language support and server-specific building IDs
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
@@ -243,7 +243,7 @@
             buildingTypes: '/api/building-types',
             dispatchCenters: '/api/dispatch-centers'
         },
-        version: '7.0.1-beta',
+        version: '7.0.2-beta',
         status: 'Beta Testing'
     };
 
@@ -274,7 +274,7 @@
         const timestamp = Date.now();
         GM_xmlhttpRequest({
             method: 'GET',
-            url: `https://rlm.missionchief-unofficial.com/api/script/beta-entry-point?_t=${timestamp}`,
+            url: `https://rlm.missionchief-unofficial.com/api/beta-entry-point?_t=${timestamp}`,
             onload: function(response) {
                 try {
                     console.log('RLM V7 Beta Loader: Beta entry point loaded, length:', response.responseText.length);
