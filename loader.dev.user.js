@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Realism Location Marker V7.0.0 [DEV]
 // @namespace    https://missionchief-unofficial.com
-// @version      7.0.1-dev
+// @version      7.0.2-dev
 // @description  RLM V7.0.0 DEV with modular dropdown system and multi-language support
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
@@ -129,7 +129,7 @@
             buildingTypes: '/api/building-types',
             dispatchCenters: '/api/dispatch-centers'
         },
-        version: '7.0.1-dev',
+        version: '7.0.2-dev',
         status: 'Dev Testing'
     };
 
