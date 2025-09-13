@@ -1,7 +1,7 @@
-<!-- Revision: 1.0 -->
+<!-- Revision: 1.1 -->
 # 🛠️ Troubleshooting
 
-This guide helps you resolve common issues with RLM V6.
+This guide helps you resolve common issues with RLM V7.
 
 ## 🚨 Common Issues
 
