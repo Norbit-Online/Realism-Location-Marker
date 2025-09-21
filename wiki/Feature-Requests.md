@@ -8,7 +8,7 @@ We welcome feature requests from our community! Here's how you can suggest new f
 
 **Primary Method:**
 - Join our [Discord Server](https://discord.gg/missionchief-unofficial)
-- Visit the [RLM Chat area](https://discord.com/channels/933050444949897226/1414718008496095323)
+- Visit the [RLM Chat area](https://discord.com/channels/1416798901381501030/1414718008496095323)
 - Post your feature request in the appropriate channel
 
 **Alternative Method:**
@@ -86,7 +86,7 @@ We prioritize features that:
 ### 📞 **Need Help?**
 
 If you're unsure about your feature request or need help formulating it:
-- Ask in the [RLM Chat area](https://discord.com/channels/933050444949897226/1414718008496095323)
+- Ask in the [RLM Chat area](https://discord.com/channels/1416798901381501030/1414718008496095323)
 - Our development team is always ready to help
 - We can guide you through the process
 
