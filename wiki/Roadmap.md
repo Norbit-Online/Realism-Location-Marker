@@ -161,7 +161,7 @@ Your feedback shapes our roadmap! We regularly review:
 
 ### 🔄 **How to Stay Updated**
 
-- **Discord**: Join our [RLM Chat area](https://discord.com/channels/933050444949897226/1414718008496095323)
+- **Discord**: Join our [RLM Chat area](https://discord.com/channels/1416798901381501030/1414718008496095323)
 - **GitHub**: Watch the repository for updates
 - **Changelog**: Check the [Changelog](Changelog.md) for recent changes
 - **Feature Requests**: Submit ideas via [Feature Requests](Feature-Requests.md)
