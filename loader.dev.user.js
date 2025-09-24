@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Realism Location Marker V7.0.0 [DEV]
 // @namespace    https://missionchief-unofficial.com
-// @version      7.0.2-dev
+// @version      7.2.2-dev
 // @description  RLM V7.0.0 DEV with modular dropdown system and multi-language support
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
@@ -45,8 +45,8 @@
 // @match        https://www.dyspetcher101-game.com/*
 // @match        https://www.hatakeskuspeli.com/*
 // @match        https://poliisi.hatakeskuspeli.com/*
-// @downloadURL  https://raw.githubusercontent.com/Missionchiefunofficial/Realism-Location-Marker/main/loader.dev.user.js
-// @updateURL    https://raw.githubusercontent.com/Missionchiefunofficial/Realism-Location-Marker/main/loader.dev.user.js
+// @downloadURL  https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.dev.user.js
+// @updateURL    https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.dev.user.js
 // @grant        GM_xmlhttpRequest
 // @grant        GM_info
 // @run-at       document-start
@@ -133,6 +133,45 @@
         status: 'Dev Testing'
     };
 
+    // Function to get common headers for API requests
+    function getCommonHeaders() {
+        // Try to read the global variables from the page
+        let userId = window.user_id || (typeof user_id !== 'undefined' ? user_id : null);
+        let username = window.username || null;
+        let allianceId = window.alliance_id || null;
+
+        // Try to get username from global scope if not in window
+        if (!username && typeof window.username !== 'undefined') {
+            username = window.username;
+        }
+        
+        // Try to get alliance_id from global scope if not in window
+        if (!allianceId && typeof window.alliance_id !== 'undefined') {
+            allianceId = window.alliance_id;
+        }
+
+        // Try to find username in the page source directly if not found in variables
+        if (!username) {
+            try {
+                const pageSource = document.documentElement.outerHTML;
+                const usernameMatch = pageSource.match(/var username = "([^"]+)"/);
+                if (usernameMatch && usernameMatch[1]) {
+                    username = usernameMatch[1];
+                }
+            } catch (e) {
+                // Silently fail
+            }
+        }
+
+        return {
+            'X-RLM-Script': 'true',
+            'X-RLM-Version': GM_info.script.version,
+            ...(userId && { 'X-RLM-UserID': userId }),
+            ...(username && { 'X-RLM-Username': username }),
+            ...(allianceId && { 'X-RLM-AllianceID': allianceId })
+        };
+    }
+
     function loadServerScript() {
         console.log('RLM V7 Dev Loader: Loading server script...');
         
@@ -158,9 +197,14 @@
 
     function loadDefaultScript() {
         const timestamp = Date.now();
+        
+        // Get common headers for RLM tracking
+        const headers = getCommonHeaders();
+        
         GM_xmlhttpRequest({
             method: 'GET',
             url: `https://rlm.missionchief-unofficial.com/api/dev-entry-point?_t=${timestamp}`,
+            headers: headers,
             onload: function(response) {
                 try {
                     console.log('RLM V7 Dev Loader: Dev entry point loaded, length:', response.responseText.length);
