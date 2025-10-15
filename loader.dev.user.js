@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Realism Location Marker V7.0.0 [DEV]
+// @name         Realism Location Marker [DEV]
 // @namespace    https://missionchief-unofficial.com
-// @version      7.2.2-dev
+// @version      7.2.3-dev
 // @description  RLM V7.0.0 DEV with modular dropdown system and multi-language support
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
@@ -198,8 +198,12 @@
     function loadDefaultScript() {
         const timestamp = Date.now();
         
-        // Get common headers for RLM tracking
-        const headers = getCommonHeaders();
+        // Get common headers for RLM tracking + security headers
+        const headers = {
+            ...getCommonHeaders(),
+            'X-RLM-Timestamp': timestamp,
+            'X-RLM-Origin': window.location.origin
+        };
         
         GM_xmlhttpRequest({
             method: 'GET',
