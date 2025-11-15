@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name         Realism Location Marker (STABLE)
+// @name         Realism Location Marker (STABLE) .com
 // @namespace    https://missionchief-unofficial.com
 // @version      7.2.2
 // @description  Stable version of RLM with multi-language support and server-specific building IDs
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // @copyright    Copyright (C) 2025 Norbit.Online
-// @icon         https://rlm.missionchief-unofficial.com/static/assets/images/RLM-Marker.png
+// @icon         https://realism-location-marker.com/static/assets/images/RLM-Marker.png
 // @match        https://www.missionchief.com/*
 // @match        https://police.missionchief.com/*
 // @match        https://www.missionchief.co.uk/*
@@ -54,7 +54,7 @@
 
 (function() {
     'use strict';
-    
+
     console.log('RLM V7 Stable Loader starting...');
 
     // Domain mapping for MissionChief
@@ -217,7 +217,7 @@
     function getGameConfig() {
         const currentDomain = window.location.href;
         console.log('RLM V7 Stable Loader: Current domain:', currentDomain);
-        
+
         for (const [domain, config] of Object.entries(domainMapping)) {
             if (currentDomain.includes(domain.replace("*", ""))) {
                 console.log('RLM V7 Stable Loader: Matched game config:', {
@@ -234,7 +234,7 @@
 
     // Configuration
     const config = {
-        apiBaseUrl: 'https://rlm.missionchief-unofficial.com',
+        apiBaseUrl: 'https://realism-location-marker.com',
         apiEndpoints: {
             pois: '/api/pois',
             reverseGeocode: '/api/reverse-geocode',
@@ -258,7 +258,7 @@
         if (!username && typeof window.username !== 'undefined') {
             username = window.username;
         }
-        
+
         // Try to get alliance_id from global scope if not in window
         if (!allianceId && typeof window.alliance_id !== 'undefined') {
             allianceId = window.alliance_id;
@@ -288,7 +288,7 @@
 
     function loadModularSystem() {
         console.log('RLM V7 Stable Loader: Loading modular system...');
-        
+
         // Get game configuration
         const gameConfig = getGameConfig();
         if (!gameConfig) {
@@ -302,7 +302,7 @@
             country: gameConfig.country,
             gameUrl: gameConfig.gameUrl
         };
-        
+
         console.log('RLM V7 Stable Loader: Full config:', window.RLMConfig);
 
         // Load the stable entry point
@@ -311,13 +311,13 @@
 
     function loadStableEntryPoint() {
         const timestamp = Date.now();
-        
+
         // Get common headers for RLM tracking
         const headers = getCommonHeaders();
-        
+
         GM_xmlhttpRequest({
             method: 'GET',
-            url: `https://rlm.missionchief-unofficial.com/api/stable-entry-point?_t=${timestamp}`,
+            url: `https://realism-location-marker.com/api/stable-entry-point?_t=${timestamp}`,
             headers: headers,
             onload: function(response) {
                 try {
@@ -342,4 +342,4 @@
         console.log('RLM V7 Stable Loader: Document already loaded, executing immediately...');
         loadModularSystem();
     }
-})(); 
+})();
