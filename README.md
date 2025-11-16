@@ -65,7 +65,7 @@ Choose the loader that's right for you:
 *This is what you'll see when using Beta or Dev loaders without authorization - clear instructions on how to request access.*
 
 ### How to Request Access:
-1. Join our [Discord Server](https://discord.gg/xqMw66EdPG)
+1. Join our [Discord Server](https://discord.gg/nR7EwXdc9p)
 2. Navigate to the **Realism Location Marker (RLM) - HUB** category
 3. In the **#rlm-chat** channel, tag @Madpugs or ask for an owner
 4. Provide your MissionChief ID (MCID) and specify which loader access you need (Beta/Dev)
@@ -102,7 +102,7 @@ Choose the loader that's right for you:
 
 ## 🆘 Support
 
-- **Discord**: [Realism Location Marker (RLM)](https://discord.gg/xqMw66EdPG) - Join the RLM Discord for community support, technical help, feature discussions, and direct access to the development team
+- **Discord**: [Realism Location Marker (RLM)](https://discord.gg/nR7EwXdc9p) - Join the RLM Discord for community support, technical help, feature discussions, and direct access to the development team
 - **Website**: [rlm.missionchief-unofficial.com](https://rlm.missionchief-unofficial.com/)
 - **Issues**: [GitHub Issues](https://github.com/Norbit-Online/Realism-Location-Marker/issues)
 
