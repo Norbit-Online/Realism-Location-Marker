@@ -1,7 +1,7 @@
-<!-- Revision: 1.3 -->
-# Realism Location Marker V7 ![version](https://badgen.net/badge/Version/7.2.2/) ![Discord](https://img.shields.io/discord/1416798901381501030.svg?label=Realism%20Location%20Marker%20(RLM)&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)
+<!-- Revision: 1.4 -->
+# Realism Location Marker V7 ![version](https://badgen.net/badge/Version/7.3.0/) ![Discord](https://img.shields.io/discord/1416798901381501030.svg?label=Realism%20Location%20Marker%20(RLM)&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)
 
-![GitHub stars](https://img.shields.io/github/stars/Norbit-Online/Realism-Location-Marker?style=social) ![GitHub forks](https://img.shields.io/github/forks/Norbit-Online/Realism-Location-Marker?style=social) ![GitHub issues](https://img.shields.io/github/issues/Norbit-Online/Realism-Location-Marker) ![GitHub last commit](https://img.shields.io/github/last-commit/Norbit-Online/Realism-Location-Marker) ![Legacy](https://img.shields.io/endpoint?url=https://rlm.missionchief-unofficial.com/api/badges/stable&label=Stable&color=green) ![Beta](https://img.shields.io/endpoint?url=https://rlm.missionchief-unofficial.com/api/badges/beta&label=Beta&color=yellow) ![Dev](https://img.shields.io/endpoint?url=https://rlm.missionchief-unofficial.com/api/badges/dev&label=Dev&color=red) ![Web](https://img.shields.io/endpoint?url=https://rlm.missionchief-unofficial.com/api/badges/web&label=Web&color=blue)
+![GitHub stars](https://img.shields.io/github/stars/Norbit-Online/Realism-Location-Marker?style=social) ![GitHub forks](https://img.shields.io/github/forks/Norbit-Online/Realism-Location-Marker?style=social) ![GitHub issues](https://img.shields.io/github/issues/Norbit-Online/Realism-Location-Marker) ![GitHub last commit](https://img.shields.io/github/last-commit/Norbit-Online/Realism-Location-Marker) ![Stable](https://img.shields.io/endpoint?url=https://realism-location-marker.com/api/badges/stable&label=Stable&color=green) ![Beta](https://img.shields.io/endpoint?url=https://realism-location-marker.com/api/badges/beta&label=Beta&color=yellow) ![Dev](https://img.shields.io/endpoint?url=https://realism-location-marker.com/api/badges/dev&label=Dev&color=red) ![Web](https://img.shields.io/endpoint?url=https://realism-location-marker.com/api/badges/web&label=Web&color=blue)
 
 > **Realism Location Marker (RLM)** is a Tampermonkey userscript that displays real-world building locations on MissionChief game maps, enhancing gameplay with accurate geographical data.
 
@@ -30,19 +30,19 @@ Choose the loader that's right for you:
 - **Recommended for**: Users who prefer the legacy V6 system
 
 ### 🟢 Stable Loader (`loader.stable.user.js`)
-- **Version**: 7.2.2
+- **Version**: 7.3.0
 - **Access**: Public - No restrictions
 - **Features**: V7 modular system with enhanced performance and new features
 - **Recommended for**: All users who want the latest stable V7 experience
 
 ### 🟡 Beta Loader (`loader.beta.user.js`)
-- **Version**: 7.2.2-beta
+- **Version**: 7.3.0-beta
 - **Access**: Restricted - Authorization required
 - **Features**: Latest stable features + pre-release testing
 - **Recommended for**: Users who want to test new features before public release
 
 ### 🔴 Dev Loader (`loader.dev.user.js`)
-- **Version**: 7.2.2-dev
+- **Version**: 7.3.0-dev
 - **Access**: Restricted - Authorization required
 - **Features**: Cutting-edge features + experimental functionality
 - **Recommended for**: Developers and advanced users testing bleeding-edge features
@@ -59,7 +59,7 @@ Choose the loader that's right for you:
 
 ### What You'll See Without Access:
 <p align="center">
-  <img src="https://rlm.missionchief-unofficial.com/static/assets/images/loaderlock.png" alt="Locked Loader Interface" />
+  <img src="https://realism-location-marker.com/static/assets/images/loaderlock.png" alt="Locked Loader Interface" />
 </p>
 
 *This is what you'll see when using Beta or Dev loaders without authorization - clear instructions on how to request access.*
@@ -80,12 +80,12 @@ Choose the loader that's right for you:
 
 ### In-Game Preview
 <p align="center">
-  <img src="https://rlm.missionchief-unofficial.com/static/assets/images/ingame%20preview%20V6.png" alt="In-Game Preview" />
+  <img src="https://realism-location-marker.com/static/assets/images/ingame%20preview%20V6.png" alt="In-Game Preview" />
 </p>
 
 ### Web Interface Preview
 <p align="center">
-  <img src="https://rlm.missionchief-unofficial.com/static/assets/images/web%20preview.png" alt="Web Interface Preview" />
+  <img src="https://realism-location-marker.com/static/assets/images/web%20preview.png" alt="Web Interface Preview" />
 </p>
 
 ## 🌍 Supported Game Worlds
@@ -103,7 +103,7 @@ Choose the loader that's right for you:
 ## 🆘 Support
 
 - **Discord**: [Realism Location Marker (RLM)](https://discord.gg/nR7EwXdc9p) - Join the RLM Discord for community support, technical help, feature discussions, and direct access to the development team
-- **Website**: [rlm.missionchief-unofficial.com](https://rlm.missionchief-unofficial.com/)
+- **Website**: [realism-location-marker.com](https://realism-location-marker.com/)
 - **Issues**: [GitHub Issues](https://github.com/Norbit-Online/Realism-Location-Marker/issues)
 
 ## 📄 License
