@@ -47,7 +47,7 @@ RLM supports **all MissionChief game worlds**:
 - [🛠️ Troubleshooting](Troubleshooting)
 - [📋 Changelog](Changelog)
 - [🌐 Web Interface](https://rlm.missionchief-unofficial.com)
-- [💬 Discord Support](https://discord.gg/xqMw66EdPG)
+- [💬 Discord Support](https://discord.gg/nR7EwXdc9p)
 
 ## 📊 Features
 
@@ -70,7 +70,7 @@ RLM is developed by the **MissionChief Unofficial Team** and supported by the co
 
 ## 🆘 Need Help?
 
-- **Discord Support**: Join our [Discord Server](https://discord.gg/xqMw66EdPG) for direct support, feature requests, and bug reports.
+- **Discord Support**: Join our [Discord Server](https://discord.gg/nR7EwXdc9p) for direct support, feature requests, and bug reports.
 - **GitHub Issues**: [Create an Issue](https://github.com/Missionchiefunofficial/Realism-Location-Marker/issues) for technical problems or suggestions.
 
 Feel free to explore the pages linked above for more information!
