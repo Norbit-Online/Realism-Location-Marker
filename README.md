@@ -1,5 +1,5 @@
-<!-- Revision: 1.4 -->
-# Realism Location Marker V7 ![version](https://badgen.net/badge/Version/7.3.0/) ![Discord](https://img.shields.io/discord/1416798901381501030.svg?label=Realism%20Location%20Marker%20(RLM)&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)
+<!-- Revision: 1.5 -->
+# Realism Location Marker V7 ![version](https://img.shields.io/badge/Version-7.3.0-blue) ![Discord](https://img.shields.io/discord/1416798901381501030.svg?label=Realism%20Location%20Marker%20(RLM)&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)
 
 ![GitHub stars](https://img.shields.io/github/stars/Norbit-Online/Realism-Location-Marker?style=social) ![GitHub forks](https://img.shields.io/github/forks/Norbit-Online/Realism-Location-Marker?style=social) ![GitHub issues](https://img.shields.io/github/issues/Norbit-Online/Realism-Location-Marker) ![GitHub last commit](https://img.shields.io/github/last-commit/Norbit-Online/Realism-Location-Marker) ![Stable](https://img.shields.io/endpoint?url=https://realism-location-marker.com/api/badges/stable&label=Stable&color=green) ![Beta](https://img.shields.io/endpoint?url=https://realism-location-marker.com/api/badges/beta&label=Beta&color=yellow) ![Dev](https://img.shields.io/endpoint?url=https://realism-location-marker.com/api/badges/dev&label=Dev&color=red) ![Web](https://img.shields.io/endpoint?url=https://realism-location-marker.com/api/badges/web&label=Web&color=blue)
 
