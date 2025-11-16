@@ -11,7 +11,6 @@ Choose the loader that's right for you:
 
 | Loader | Status | Access | Description |
 |--------|--------|--------|-------------|
-| **[Main Loader](https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.user.js)** | 🟢 **Public** | Open to all users | **Legacy V6** loader with all core features |
 | **[Stable Loader](https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.stable.user.js)** | 🟢 **Public** | Open to all users | V7 stable release with modular system |
 | **[Beta Loader](https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.beta.user.js)** | 🟡 **Restricted** | Authorized users only | Pre-release testing with latest features |
 | **[Dev Loader](https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.dev.user.js)** | 🔴 **Restricted** | Authorized users only | Development version with experimental features |
@@ -22,12 +21,6 @@ Choose the loader that's right for you:
 **For detailed installation instructions, see our [Wiki Documentation](https://github.com/Norbit-Online/Realism-Location-Marker/wiki)**
 
 ## 🔧 Loader Details
-
-### 🟢 Main Loader (`loader.user.js`) - **Legacy V6**
-- **Version**: 6.5.1
-- **Access**: Public - No restrictions
-- **Features**: Legacy V6 system with all stable features, building existence checks, POI management
-- **Recommended for**: Users who prefer the legacy V6 system
 
 ### 🟢 Stable Loader (`loader.stable.user.js`)
 - **Version**: 7.3.0
