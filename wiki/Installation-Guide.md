@@ -279,7 +279,7 @@ If you prefer to navigate manually:
 
 If you encounter issues not covered in this guide:
 
-1. **Discord Support**: Join our [Discord Server](https://discord.gg/xqMw66EdPG) and navigate to **RLM-HUB**
+1. **Discord Support**: Join our [Discord Server](https://discord.gg/nR7EwXdc9p) and navigate to **RLM-HUB**
 2. **GitHub Issues**: Report bugs on our [GitHub Issues page](https://github.com/Missionchiefunofficial/Realism-Location-Marker/issues)
 3. **Documentation**: Check our [Troubleshooting Guide](Troubleshooting.md) for more detailed solutions
 
