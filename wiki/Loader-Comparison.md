@@ -137,7 +137,7 @@ Daily  Weekly  Monthly
 4. **Authorization request** - Contact developers
 
 ### **How to Request Access:**
-1. **Join Discord** - [MissionChief Unofficial Discord](https://discord.gg/nR7EwXdc9p)
+1. **Join Discord** - [MissionChief Unofficial Discord](https://discord.gg/xqMw66EdPG)
 2. **Find your MCID** - Check your MissionChief profile URL
 3. **Contact developers** - Use the authorization system
 4. **Wait for approval** - Usually processed within 24 hours
