@@ -203,7 +203,7 @@ This guide helps you resolve common issues with RLM V7.
 ## 🔄 Cache Clearing Tools
 
 ### Automatic Cache Clear
-- Visit [rlm.missionchief-unofficial.com/clearcache](https://rlm.missionchief-unofficial.com/clearcache)
+- Visit [realism-location-marker.com/clearcache](https://realism-location-marker.com/clearcache)
 - Use the provided tools to clear cache
 
 ### Manual Cache Clear
