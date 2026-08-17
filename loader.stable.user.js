@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Realism Location Marker (STABLE)
 // @namespace    https://realism-location-marker.com
-// @version      7.3.1
-// @description  Stable version of RLM V7.3.1 with multi-language support and server-specific building IDs
+// @version      7.3.2
+// @description  Stable version of RLM V7.3.2 with multi-language support and server-specific building IDs
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // @copyright    Copyright (C) 2025 Norbit.Online
@@ -269,8 +269,43 @@
             buildingTypes: '/api/building-types',
             dispatchCenters: '/api/dispatch-centers'
         },
-        version: '7.3.1',
+        version: '7.3.2',
         status: 'Production'
+    };
+
+    const RLM_POI_TYPES = [
+        {
+            table_name: 'poi_fbi_field_office',
+            friendly_name: 'FBI Field Offices',
+            emoji: '🏛️',
+            osm_tag: 'rlm=fbi_field_office'
+        }
+    ];
+
+    const _gmRequest = GM_xmlhttpRequest;
+    GM_xmlhttpRequest = function(details) {
+        const origOnload = details && details.onload;
+        if (origOnload && details.url && String(details.url).indexOf('/api/poi-types') !== -1) {
+            details.onload = function(response) {
+                try {
+                    const data = JSON.parse(response.responseText);
+                    if (Array.isArray(data)) {
+                        RLM_POI_TYPES.forEach(function(extra) {
+                            if (!data.some(function(p) { return p.osm_tag === extra.osm_tag; })) {
+                                data.push(extra);
+                            }
+                        });
+                        response = Object.assign({}, response, {
+                            responseText: JSON.stringify(data)
+                        });
+                    }
+                } catch (e) {
+                    console.warn('RLM V7 Stable Loader: could not inject RLM tags into poi-types', e);
+                }
+                origOnload(response);
+            };
+        }
+        return _gmRequest(details);
     };
 
     // Function to get common headers for API requests
