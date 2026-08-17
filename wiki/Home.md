@@ -10,7 +10,7 @@ RLM is a userscript that integrates with MissionChief to display realistic build
 ## 🚀 Quick Start
 
 1. **Install Tampermonkey** browser extension
-2. **Choose your loader** (Main, Beta, or Dev)
+2. **Choose your loader** (Stable, Beta, or Dev)
 3. **Install the loader** in Tampermonkey
 4. **Visit MissionChief** and enjoy enhanced gameplay!
 
@@ -18,7 +18,7 @@ RLM is a userscript that integrates with MissionChief to display realistic build
 
 | Version | Status | Access | Description |
 |---------|--------|--------|-------------|
-| **Main** | 🟢 Stable | Public | Production-ready version for all users |
+| **Stable** | 🟢 Stable | Public | Production-ready version for all users |
 | **Beta** | 🟡 Testing | Restricted | Pre-release version for testing |
 | **Dev** | 🔴 Development | Restricted | Latest features under development |
 
@@ -46,8 +46,8 @@ RLM supports **all MissionChief game worlds**:
 - [🔧 Loader Comparison](Loader-Comparison)
 - [🛠️ Troubleshooting](Troubleshooting)
 - [📋 Changelog](Changelog)
-- [🌐 Web Interface](https://rlm.missionchief-unofficial.com)
-- [💬 Discord Support](https://discord.gg/xqMw66EdPG)
+- [🌐 Web Interface](https://realism-location-marker.com)
+- [💬 Discord Support](https://discord.gg/nR7EwXdc9p)
 
 ## 📊 Features
 
@@ -60,18 +60,18 @@ RLM supports **all MissionChief game worlds**:
 
 ## 🏆 Community
 
-RLM is developed by the **MissionChief Unofficial Team** and supported by the community. Join our Discord for support, feature requests, and updates!
+RLM is developed by **Norbit.Online** and supported by the community. Join our Discord for support, feature requests, and updates!
 
 ## 📄 About This Project
 
-- **Repository**: [GitHub - Missionchiefunofficial/Realism-Location-Marker](https://github.com/Missionchiefunofficial/Realism-Location-Marker)
-- **Website**: [rlm.missionchief-unofficial.com](https://rlm.missionchief-unofficial.com)
+- **Repository**: [GitHub - Norbit-Online/Realism-Location-Marker](https://github.com/Norbit-Online/Realism-Location-Marker)
+- **Website**: [realism-location-marker.com](https://realism-location-marker.com)
 - **License**: GPL-3.0
 
 ## 🆘 Need Help?
 
-- **Discord Support**: Join our [Discord Server](https://discord.gg/xqMw66EdPG) for direct support, feature requests, and bug reports.
-- **GitHub Issues**: [Create an Issue](https://github.com/Missionchiefunofficial/Realism-Location-Marker/issues) for technical problems or suggestions.
+- **Discord Support**: Join our [Discord Server](https://discord.gg/nR7EwXdc9p) for direct support, feature requests, and bug reports.
+- **GitHub Issues**: [Create an Issue](https://github.com/Norbit-Online/Realism-Location-Marker/issues) for technical problems or suggestions.
 
 Feel free to explore the pages linked above for more information!
 
