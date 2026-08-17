@@ -12,7 +12,7 @@ We welcome feature requests from our community! Here's how you can suggest new f
 - Post your feature request in the appropriate channel
 
 **Alternative Method:**
-- Create a [GitHub Issue](https://github.com/Missionchiefunofficial/Realism-Location-Marker/issues)
+- Create a [GitHub Issue](https://github.com/Norbit-Online/Realism-Location-Marker/issues)
 - Use the "Feature Request" template
 
 ### 💡 **What to Include**
