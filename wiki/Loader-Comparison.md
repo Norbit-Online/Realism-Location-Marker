@@ -5,7 +5,7 @@ This page explains the differences between the three RLM loader versions and hel
 
 ## 📊 Version Overview
 
-| Feature | Main | Beta | Dev |
+| Feature | Stable | Beta | Dev |
 |---------|------|------|-----|
 | **Status** | 🟢 Stable | 🟡 Testing | 🔴 Development |
 | **Access** | Public | Restricted | Restricted |
@@ -13,7 +13,7 @@ This page explains the differences between the three RLM loader versions and hel
 | **Features** | Production | Pre-release | Latest |
 | **Updates** | Stable | Frequent | Daily |
 
-## 🟢 Main Loader (Production)
+## 🟢 Stable Loader (Production)
 
 ### **Best For:**
 - ✅ Regular MissionChief players
@@ -48,11 +48,11 @@ This page explains the differences between the three RLM loader versions and hel
 - ✅ Users with authorization access
 
 ### **Features:**
-- 🆕 **All Main features** plus:
+- 🆕 **All Stable features** plus:
 - 🧪 New features in testing
 - 🔧 Experimental functionality
 - 📈 Performance improvements
-- 🐛 Bug fixes before Main release
+- 🐛 Bug fixes before Stable release
 
 ### **Stability:**
 - **Medium** - Generally stable with some bugs
@@ -101,16 +101,16 @@ This page explains the differences between the three RLM loader versions and hel
 ## 🔄 Version Progression
 
 ```
-Dev → Beta → Main
+Dev → Beta → Stable
  ↑      ↑      ↑
 Daily  Weekly  Monthly
 ```
 
-**Features flow from Dev → Beta → Main** as they become stable.
+**Features flow from Dev → Beta → Stable** as they become stable.
 
 ## 🎯 How to Choose
 
-### **Choose Main if:**
+### **Choose Stable if:**
 - You want reliable, stable features
 - You're a regular MissionChief player
 - You don't want to deal with bugs
@@ -137,7 +137,7 @@ Daily  Weekly  Monthly
 4. **Authorization request** - Contact developers
 
 ### **How to Request Access:**
-1. **Join Discord** - [MissionChief Unofficial Discord](https://discord.gg/xqMw66EdPG)
+1. **Join Discord** - [MissionChief Unofficial Discord](https://discord.gg/nR7EwXdc9p)
 2. **Find your MCID** - Check your MissionChief profile URL
 3. **Contact developers** - Use the authorization system
 4. **Wait for approval** - Usually processed within 24 hours
@@ -160,8 +160,8 @@ https://www.missionchief.com/profile/621545
 4. **Refresh MissionChief** to load the active version
 
 ### **Visual Example:**
-![All Loaders Interface](https://rlm.missionchief-unofficial.com/static/assets/images/allloaders.png)
-*You can see all three RLM versions (Main, Dev, Beta) available simultaneously*
+![All Loaders Interface](https://realism-location-marker.com/static/assets/images/allloaders.png)
+*You can see all three RLM versions (Stable, Dev, Beta) available simultaneously*
 
 ### **Benefits:**
 - ✅ **No need to uninstall** - keep all versions
@@ -171,8 +171,8 @@ https://www.missionchief.com/profile/621545
 
 ## 📞 Support
 
-- **💬 Discord**: Join our support server
-- **🌐 Website**: Visit [rlm.missionchief-unofficial.com](https://rlm.missionchief-unofficial.com)
+- **💬 Discord**: Join our [RLM Discord](https://discord.gg/nR7EwXdc9p)
+- **🌐 Website**: Visit [realism-location-marker.com](https://realism-location-marker.com)
 - **📧 Contact**: Reach out to the development team
 
 ---
