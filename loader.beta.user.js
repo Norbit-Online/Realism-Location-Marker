@@ -1,49 +1,73 @@
 // ==UserScript==
 // @name         Realism Location Marker (BETA)
 // @namespace    https://realism-location-marker.com
-// @version      7.3.0-beta
-// @description  Beta version of RLM V7.3.0 with multi-language support and server-specific building IDs
+// @version      7.3.1-beta
+// @description  Beta version of RLM V7.3.1 with multi-language support and server-specific building IDs
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // @copyright    Copyright (C) 2025 Norbit.Online
 // @icon         https://realism-location-marker.com/static/assets/images/RLM-Marker.png
 // @match        https://www.missionchief.com/*
+// @match        https://missionchief.com/*
 // @match        https://police.missionchief.com/*
 // @match        https://www.missionchief.co.uk/*
+// @match        https://missionchief.co.uk/*
 // @match        https://police.missionchief.co.uk/*
 // @match        https://www.missionchief-australia.com/*
+// @match        https://missionchief-australia.com/*
 // @match        https://police.missionchief-australia.com/*
 // @match        https://www.leitstellenspiel.de/*
+// @match        https://leitstellenspiel.de/*
 // @match        https://polizei.leitstellenspiel.de/*
 // @match        https://www.jogo-operador112.com/*
+// @match        https://jogo-operador112.com/*
 // @match        https://policia.jogo-operador112.com/*
 // @match        https://www.centro-de-mando.es/*
+// @match        https://centro-de-mando.es/*
 // @match        https://www.meldkamerspel.com/*
+// @match        https://meldkamerspel.com/*
 // @match        https://politie.meldkamerspel.com/*
 // @match        https://www.operatorratunkowy.pl/*
+// @match        https://operatorratunkowy.pl/*
 // @match        https://policja.operatorratunkowy.pl/*
 // @match        https://www.larmcentralen-spelet.se/*
+// @match        https://larmcentralen-spelet.se/*
 // @match        https://polis.larmcentralen-spelet.se/*
 // @match        https://www.operatore112.it/*
+// @match        https://operatore112.it/*
 // @match        https://polizia.operatore112.it/*
 // @match        https://www.operateur112.fr/*
+// @match        https://operateur112.fr/*
 // @match        https://police.operateur112.fr/*
 // @match        https://www.dispetcher-112.com/*
+// @match        https://dispetcher-112.com/*
 // @match        https://www.operacni-stredisko.cz/*
+// @match        https://operacni-stredisko.cz/*
 // @match        https://policie.operacni-stredisko.cz/*
 // @match        https://www.alarmcentral-spil.dk/*
+// @match        https://alarmcentral-spil.dk/*
 // @match        https://politi.alarmcentral-spil.dk/*
 // @match        https://www.missionchief-japan.com/*
+// @match        https://missionchief-japan.com/*
 // @match        https://www.missionchief-korea.com/*
+// @match        https://missionchief-korea.com/*
 // @match        https://www.nodsentralspillet.com/*
+// @match        https://nodsentralspillet.com/*
 // @match        https://politiet.nodsentralspillet.com/*
 // @match        https://www.jocdispecerat112.com/*
+// @match        https://jocdispecerat112.com/*
 // @match        https://www.dispecerske-centrum.com/*
+// @match        https://dispecerske-centrum.com/*
 // @match        https://www.112-merkez.com/*
+// @match        https://112-merkez.com/*
 // @match        https://www.operador193.com/*
+// @match        https://operador193.com/*
 // @match        https://www.centro-de-mando.mx/*
+// @match        https://centro-de-mando.mx/*
 // @match        https://www.dyspetcher101-game.com/*
+// @match        https://dyspetcher101-game.com/*
 // @match        https://www.hatakeskuspeli.com/*
+// @match        https://hatakeskuspeli.com/*
 // @match        https://poliisi.hatakeskuspeli.com/*
 // @downloadURL  https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.beta.user.js
 // @updateURL    https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.beta.user.js
@@ -218,8 +242,10 @@
         const currentDomain = window.location.href;
         console.log('RLM V7 Beta Loader: Current domain:', currentDomain);
         
+        const hostname = (window.location.hostname || '').replace(/^www\./i, '').toLowerCase();
         for (const [domain, config] of Object.entries(domainMapping)) {
-            if (currentDomain.includes(domain.replace("*", ""))) {
+            const mappedHost = domain.replace(/^https:\/\//i, '').replace(/\/\*$/, '').replace(/^www\./i, '').toLowerCase();
+            if (hostname === mappedHost) {
                 console.log('RLM V7 Beta Loader: Matched game config:', {
                     domain: domain,
                     country: config.country,
@@ -243,7 +269,7 @@
             buildingTypes: '/api/building-types',
             dispatchCenters: '/api/dispatch-centers'
         },
-        version: '7.3.0-beta',
+        version: '7.3.1-beta',
         status: 'Beta Testing'
     };
 
