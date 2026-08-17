@@ -32,9 +32,9 @@ Before installing RLM, ensure you have:
 
 1. **Install Tampermonkey**: Get the Tampermonkey extension for your browser
 2. **Choose Your Loader**: Click the direct link for your preferred version:
-   - 🟢 **Main**: [Install Main Loader](https://raw.githubusercontent.com/Missionchiefunofficial/Realism-Location-Marker/main/loader.user.js)
-   - 🟡 **Beta**: [Install Beta Loader](https://raw.githubusercontent.com/Missionchiefunofficial/Realism-Location-Marker/main/loader.beta.user.js)
-   - 🔴 **Dev**: [Install Dev Loader](https://raw.githubusercontent.com/Missionchiefunofficial/Realism-Location-Marker/main/loader.dev.user.js)
+   - 🟢 **Stable**: [Install Stable Loader](https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.stable.user.js)
+   - 🟡 **Beta**: [Install Beta Loader](https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.beta.user.js)
+   - 🔴 **Dev**: [Install Dev Loader](https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.dev.user.js)
 3. **Install**: Tampermonkey will automatically detect the script and show installation dialog
 4. **Confirm**: Click "Install" in the Tampermonkey dialog
 5. **Play**: Visit MissionChief and enjoy enhanced gameplay!
@@ -42,9 +42,9 @@ Before installing RLM, ensure you have:
 ### 🎯 Alternative Method (Manual Navigation)
 
 If you prefer to navigate manually:
-1. **Go to GitHub**: Visit our [repository](https://github.com/Missionchiefunofficial/Realism-Location-Marker)
+1. **Go to GitHub**: Visit our [repository](https://github.com/Norbit-Online/Realism-Location-Marker)
 2. **Find Loader Files**: Look for the loader files in the root directory:
-   - `loader.user.js` (Main)
+   - `loader.stable.user.js` (Stable)
    - `loader.beta.user.js` (Beta)
    - `loader.dev.user.js` (Dev)
 3. **Choose Your Loader**: Click on your chosen loader file
@@ -56,7 +56,7 @@ If you prefer to navigate manually:
 
 **Step 1**: Install Tampermonkey from your browser's extension store
 **Step 2**: Go to GitHub repository (files are in the root directory)
-**Step 3**: Click on your chosen loader file (`loader.user.js`, `loader.beta.user.js`, or `loader.dev.user.js`)
+**Step 3**: Click on your chosen loader file (`loader.stable.user.js`, `loader.beta.user.js`, or `loader.dev.user.js`)
 **Step 4**: Click the "Raw" button (top-right corner)
 **Step 5**: Tampermonkey will automatically detect the script
 **Step 6**: Click "Install" when prompted
@@ -79,10 +79,10 @@ If you prefer to navigate manually:
 3. This enables advanced extension features needed for userscripts
 
 #### Step 3: Install RLM Loader
-1. **Go to GitHub Repository**: Navigate to our [GitHub repository](https://github.com/Missionchiefunofficial/Realism-Location-Marker)
+1. **Go to GitHub Repository**: Navigate to our [GitHub repository](https://github.com/Norbit-Online/Realism-Location-Marker)
 2. **Navigate to Loaders**: Click on the `RLM` folder, then `loaders` folder
 3. **Choose Your Loader**: Click on your chosen loader file:
-   - `loader.user.js` (Main - Public access)
+   - `loader.stable.user.js` (Stable - Public access)
    - `loader.beta.user.js` (Beta - Restricted access)  
    - `loader.dev.user.js` (Dev - Restricted access)
 4. **Click Raw Button**: Click the **"Raw"** button (top-right) to view the script source
@@ -108,9 +108,9 @@ If you prefer to navigate manually:
 4. This enables developer features for userscripts
 
 #### Step 3: Install RLM Loader
-1. Go to our [GitHub repository](https://github.com/Missionchiefunofficial/Realism-Location-Marker)
+1. Go to our [GitHub repository](https://github.com/Norbit-Online/Realism-Location-Marker)
 2. Click on your chosen loader file:
-   - `loader.user.js` (Main - Public access)
+   - `loader.stable.user.js` (Stable - Public access)
    - `loader.beta.user.js` (Beta - Restricted access)
    - `loader.dev.user.js` (Dev - Restricted access)
 3. Click **"Raw"** to view the script source
@@ -139,9 +139,9 @@ If you prefer to navigate manually:
 3. This enables advanced extension features needed for userscripts
 
 #### Step 3: Install RLM Loader
-1. Go to our [GitHub repository](https://github.com/Missionchiefunofficial/Realism-Location-Marker)
+1. Go to our [GitHub repository](https://github.com/Norbit-Online/Realism-Location-Marker)
 2. Click on your chosen loader file:
-   - `loader.user.js` (Main - Public access)
+   - `loader.stable.user.js` (Stable - Public access)
    - `loader.beta.user.js` (Beta - Restricted access)
    - `loader.dev.user.js` (Dev - Restricted access)
 3. Click **"Raw"** to view the script source
@@ -171,9 +171,9 @@ If you prefer to navigate manually:
 4. This enables userscript functionality
 
 #### Step 3: Install RLM Loader
-1. Go to our [GitHub repository](https://github.com/Missionchiefunofficial/Realism-Location-Marker)
+1. Go to our [GitHub repository](https://github.com/Norbit-Online/Realism-Location-Marker)
 2. Click on your chosen loader file:
-   - `loader.user.js` (Main - Public access)
+   - `loader.stable.user.js` (Stable - Public access)
    - `loader.beta.user.js` (Beta - Restricted access)
    - `loader.dev.user.js` (Dev - Restricted access)
 3. Click **"Raw"** to view the script source
@@ -201,9 +201,9 @@ If you prefer to navigate manually:
 3. This enables advanced extension features needed for userscripts
 
 #### Step 3: Install RLM Loader
-1. Go to our [GitHub repository](https://github.com/Missionchiefunofficial/Realism-Location-Marker)
+1. Go to our [GitHub repository](https://github.com/Norbit-Online/Realism-Location-Marker)
 2. Click on your chosen loader file:
-   - `loader.user.js` (Main - Public access)
+   - `loader.stable.user.js` (Stable - Public access)
    - `loader.beta.user.js` (Beta - Restricted access)
    - `loader.dev.user.js` (Dev - Restricted access)
 3. Click **"Raw"** to view the script source
@@ -219,7 +219,7 @@ If you prefer to navigate manually:
 
 ## Loader Selection
 
-### 🟢 Main Loader (`loader.user.js`)
+### 🟢 Stable Loader (`loader.stable.user.js`)
 - **Access**: Public - No restrictions
 - **Features**: All stable features, building existence checks, POI management
 - **Recommended for**: All users who want a reliable, feature-complete experience
@@ -247,7 +247,7 @@ If you prefer to navigate manually:
 
 ### Expected Behavior
 
-- **Main Loader**: Should work immediately with full functionality
+- **Stable Loader**: Should work immediately with full functionality
 - **Beta/Dev Loaders**: May show access restriction message if not authorized
 - **All Loaders**: Should display version information in browser console
 
@@ -279,8 +279,8 @@ If you prefer to navigate manually:
 
 If you encounter issues not covered in this guide:
 
-1. **Discord Support**: Join our [Discord Server](https://discord.gg/xqMw66EdPG) and navigate to **RLM-HUB**
-2. **GitHub Issues**: Report bugs on our [GitHub Issues page](https://github.com/Missionchiefunofficial/Realism-Location-Marker/issues)
+1. **Discord Support**: Join our [Discord Server](https://discord.gg/nR7EwXdc9p) and navigate to **RLM-HUB**
+2. **GitHub Issues**: Report bugs on our [GitHub Issues page](https://github.com/Norbit-Online/Realism-Location-Marker/issues)
 3. **Documentation**: Check our [Troubleshooting Guide](Troubleshooting.md) for more detailed solutions
 
 ---
