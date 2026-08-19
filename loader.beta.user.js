@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Realism Location Marker (BETA)
 // @namespace    https://realism-location-marker.com
-// @version      7.3.2-beta
-// @description  Beta version of RLM V7.3.2 with multi-language support and server-specific building IDs
+// @version      7.3.3-beta
+// @description  Beta version of RLM V7.3.3 with multi-language support and server-specific building IDs
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // @copyright    Copyright (C) 2025 Norbit.Online
@@ -269,7 +269,7 @@
             buildingTypes: '/api/building-types',
             dispatchCenters: '/api/dispatch-centers'
         },
-        version: '7.3.2-beta',
+        version: '7.3.3-beta',
         status: 'Beta Testing'
     };
 
