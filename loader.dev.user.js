@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Realism Location Marker [DEV]
 // @namespace    https://realism-location-marker.com
-// @version      7.3.3-dev
-// @description  RLM V7.3.3 DEV with modular dropdown system and multi-language support
+// @version      7.3.4-dev
+// @description  RLM V7.3.4 DEV with modular dropdown system and multi-language support
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // @copyright    Copyright (C) 2025 Norbit.Online
@@ -155,7 +155,7 @@
             buildingTypes: '/api/building-types',
             dispatchCenters: '/api/dispatch-centers'
         },
-        version: '7.3.3-dev',
+        version: '7.3.4-dev',
         status: 'Dev Testing'
     };
 
@@ -187,9 +187,16 @@
                                 data.push(extra);
                             }
                         });
-                        response = Object.assign({}, response, {
-                            responseText: JSON.stringify(data)
+                        origOnload({
+                            status: response.status,
+                            statusText: response.statusText,
+                            readyState: response.readyState,
+                            responseHeaders: response.responseHeaders,
+                            responseText: JSON.stringify(data),
+                            response: JSON.stringify(data),
+                            finalUrl: response.finalUrl
                         });
+                        return;
                     }
                 } catch (e) {
                     console.warn('RLM V7 Dev Loader: could not inject RLM tags into poi-types', e);
