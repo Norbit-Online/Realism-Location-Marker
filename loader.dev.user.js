@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Realism Location Marker [DEV]
 // @namespace    https://realism-location-marker.com
-// @version      7.3.2-dev
-// @description  RLM V7.3.2 DEV with modular dropdown system and multi-language support
+// @version      7.3.3-dev
+// @description  RLM V7.3.3 DEV with modular dropdown system and multi-language support
 // @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // @copyright    Copyright (C) 2025 Norbit.Online
@@ -155,7 +155,7 @@
             buildingTypes: '/api/building-types',
             dispatchCenters: '/api/dispatch-centers'
         },
-        version: '7.3.2-dev',
+        version: '7.3.3-dev',
         status: 'Dev Testing'
     };
 
@@ -165,6 +165,12 @@
             friendly_name: 'FBI Field Offices',
             emoji: '🏛️',
             osm_tag: 'rlm=fbi_field_office'
+        },
+        {
+            table_name: 'poi_rnli_station',
+            friendly_name: 'RNLI Stations',
+            emoji: '🚤',
+            osm_tag: 'rlm=rnli_station'
         }
     ];
 
