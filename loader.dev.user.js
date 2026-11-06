@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Realism Location Marker [DEV]
 // @namespace    https://realism-location-marker.com
-// @version      7.3.5-dev
-// @description  RLM V7.3.5 DEV with modular dropdown system and multi-language support
-// @author       Richard Cameron (Madpugs) - Norbit.Online / MissionChief Unofficial Team
+// @version      7.3.6-dev
+// @description  RLM V7.3.6 DEV with modular dropdown system and multi-language support
+// @author       Richard Cameron (Madpugs) - Norbit.Online
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // @copyright    Copyright (C) 2025 Norbit.Online
 // @icon         https://realism-location-marker.com/static/assets/images/RLM-Marker.png
@@ -62,8 +62,8 @@
 // @match        https://112-merkez.com/*
 // @match        https://www.operador193.com/*
 // @match        https://operador193.com/*
-// @match        https://www.centro-de-mando.mx/*
-// @match        https://centro-de-mando.mx/*
+// @match        https://www.centro-de-mando-americas.com/*
+// @match        https://centro-de-mando-americas.com/*
 // @match        https://www.dyspetcher101-game.com/*
 // @match        https://dyspetcher101-game.com/*
 // @match        https://www.hatakeskuspeli.com/*
@@ -71,8 +71,10 @@
 // @match        https://poliisi.hatakeskuspeli.com/*
 // @downloadURL  https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.dev.user.js
 // @updateURL    https://raw.githubusercontent.com/Norbit-Online/Realism-Location-Marker/main/loader.dev.user.js
+// Public GitHub repo serves loaders at root (copied from RLM/loaders/). Nested RLM/loaders/ URLs 404.
 // @grant        GM_xmlhttpRequest
 // @grant        GM_info
+// @grant        unsafeWindow
 // @run-at       document-start
 // ==/UserScript==
 
@@ -117,7 +119,7 @@
         "https://www.dispecerske-centrum.com/*": { country: "SK", gameUrl: "dispecerske-centrum.com" },
         "https://www.112-merkez.com/*": { country: "TR", gameUrl: "112-merkez.com" },
         "https://www.operador193.com/*": { country: "BR", gameUrl: "operador193.com" },
-        "https://www.centro-de-mando.mx/*": { country: "MX", gameUrl: "centro-de-mando.mx" },
+        "https://www.centro-de-mando-americas.com/*": { country: "MX", gameUrl: "centro-de-mando-americas.com" },
         "https://www.dyspetcher101-game.com/*": { country: "UA", gameUrl: "dyspetcher101-game.com" },
         "https://www.hatakeskuspeli.com/*": { country: "FI", gameUrl: "hatakeskuspeli.com" },
         "https://poliisi.hatakeskuspeli.com/*": { country: "FI", gameUrl: "poliisi.hatakeskuspeli.com" }
@@ -155,24 +157,64 @@
             buildingTypes: '/api/building-types',
             dispatchCenters: '/api/dispatch-centers'
         },
-        version: '7.3.5-dev',
+        version: '7.3.6-dev',
         status: 'Dev Testing'
     };
 
-    const TEST_RLM_POI_TYPES = [
-        {
-            table_name: 'poi_fbi_field_office',
-            friendly_name: 'FBI Field Offices',
-            emoji: '🏛️',
-            osm_tag: 'rlm=fbi_field_office'
-        },
-        {
-            table_name: 'poi_rnli_station',
-            friendly_name: 'RNLI Stations',
-            emoji: '🚤',
-            osm_tag: 'rlm=rnli_station'
+    function getRlmWorld() {
+        if (window.RLMConfig && window.RLMConfig.country) {
+            return window.RLMConfig.country;
         }
-    ];
+        const game = getGameConfig();
+        return (game && game.country) || '';
+    }
+
+    if (!window.RLMExtraPoiTypes) {
+        window.RLMExtraPoiTypes = {
+            all: [
+                {
+                    table_name: 'poi_fbi_field_office',
+                    friendly_name: 'FBI Field Offices',
+                    emoji: '🏛️',
+                    osm_tag: 'rlm=fbi_field_office',
+                    worlds: ['US']
+                },
+                {
+                    table_name: 'poi_rnli_station',
+                    friendly_name: 'RNLI Stations',
+                    emoji: '🚤',
+                    osm_tag: 'rlm=rnli_station',
+                    worlds: ['UK']
+                }
+            ],
+            forWorld: function(world) {
+                const w = world || '';
+                return this.all.filter(function(tag) {
+                    return !tag.worlds || !tag.worlds.length || tag.worlds.indexOf(w) !== -1;
+                });
+            },
+            isAllowed: function(poi, world) {
+                const tag = poi && poi.osm_tag;
+                const match = this.all.filter(function(item) { return item.osm_tag === tag; })[0];
+                if (!match) {
+                    return true;
+                }
+                const w = world || '';
+                return !match.worlds || !match.worlds.length || match.worlds.indexOf(w) !== -1;
+            },
+            mergeInto: function(list, world) {
+                const filtered = (Array.isArray(list) ? list : []).filter(function(poi) {
+                    return this.isAllowed(poi, world);
+                }, this);
+                this.forWorld(world).forEach(function(extra) {
+                    if (!filtered.some(function(p) { return p.osm_tag === extra.osm_tag; })) {
+                        filtered.push(extra);
+                    }
+                });
+                return filtered;
+            }
+        };
+    }
 
     const _gmRequest = GM_xmlhttpRequest;
     GM_xmlhttpRequest = function(details) {
@@ -181,19 +223,15 @@
             details.onload = function(response) {
                 try {
                     const data = JSON.parse(response.responseText);
-                    if (Array.isArray(data)) {
-                        TEST_RLM_POI_TYPES.forEach(function(extra) {
-                            if (!data.some(function(p) { return p.osm_tag === extra.osm_tag; })) {
-                                data.push(extra);
-                            }
-                        });
+                    if (Array.isArray(data) && window.RLMExtraPoiTypes) {
+                        const merged = window.RLMExtraPoiTypes.mergeInto(data, getRlmWorld());
                         origOnload({
                             status: response.status,
                             statusText: response.statusText,
                             readyState: response.readyState,
                             responseHeaders: response.responseHeaders,
-                            responseText: JSON.stringify(data),
-                            response: JSON.stringify(data),
+                            responseText: JSON.stringify(merged),
+                            response: JSON.stringify(merged),
                             finalUrl: response.finalUrl
                         });
                         return;
@@ -256,6 +294,12 @@
             return;
         }
 
+        try {
+            window.RLMPageWindow = (typeof unsafeWindow !== 'undefined' && unsafeWindow) ? unsafeWindow : window;
+        } catch (e) {
+            window.RLMPageWindow = window;
+        }
+
         // Add configuration before loading the server script
         window.RLMConfig = {
             ...config,
@@ -281,7 +325,7 @@
         
         GM_xmlhttpRequest({
             method: 'GET',
-            url: `https://realism-location-marker.com/api/dev-entry-point?_t=${timestamp}`,
+            url: `https://realism-location-marker.com/api/dev-entry-point?v=${encodeURIComponent(GM_info.script.version)}`,
             headers: headers,
             onload: function(response) {
                 try {
